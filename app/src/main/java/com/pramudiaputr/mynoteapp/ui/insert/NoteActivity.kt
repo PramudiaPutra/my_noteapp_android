@@ -154,7 +154,7 @@ class NoteActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun obtainViewModel(activity: NoteActivity): NoteViewModel {
+    private fun obtainViewModel(activity: AppCompatActivity): NoteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory)[NoteViewModel::class.java]
     }

@@ -3,7 +3,7 @@ package com.pramudiaputr.mynoteapp.helper
 import androidx.recyclerview.widget.DiffUtil
 import com.pramudiaputr.mynoteapp.db.Note
 
-class NotDiffCallback(
+class NoteDiffCallback(
     private val mOldNoteList: List<Note>,
     private val mNewNoteList: List<Note>,
 ) : DiffUtil.Callback() {
