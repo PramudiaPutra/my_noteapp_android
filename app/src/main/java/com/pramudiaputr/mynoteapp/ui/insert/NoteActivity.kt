@@ -2,6 +2,7 @@ package com.pramudiaputr.mynoteapp.ui.insert
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -86,6 +87,7 @@ class NoteActivity : AppCompatActivity() {
                             note?.date = DateHelper.getCurrentDate()
                         }
                         noteViewModel.insert(note as Note)
+                        Log.d("USER_TAG", "insert: $note")
                         showToast(getString(R.string.added))
                     }
                     finish()
@@ -139,6 +141,7 @@ class NoteActivity : AppCompatActivity() {
             setPositiveButton(getString(R.string.yes)) { _, _ ->
                 if (!isDialogClosed) {
                     noteViewModel.delete(note as Note)
+                    Log.d("USER_TAG", "delete: $note")
                     showToast(getString(R.string.deleted))
                 }
                 finish()
